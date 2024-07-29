@@ -1,9 +1,9 @@
 document.getElementById('botton').addEventListener('click', function() {
-    const prime = findNthPrime(1001);
+    const prime = funcao2(1001);
     document.getElementById('result').innerText = `${prime}`;
 });
 
-function isPrime(num) {
+function funcao1(num) {
     if (num <= 1) return false;
     if (num <= 3) return true;
     if (num % 2 === 0 || num % 3 === 0) return false;
@@ -15,11 +15,11 @@ function isPrime(num) {
     return true;
 }
 
-function findNthPrime(n) {
+function funcao2(n) {
     let count = 0;
     let num = 2;
     while (count < n) {
-        if (isPrime(num)) {
+        if (funcao1(num)) {
             count++;
         }
         num++;
